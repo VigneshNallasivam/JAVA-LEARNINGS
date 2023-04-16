@@ -1,0 +1,111 @@
+//INTRODUCTION TO JAVA
+    1)HISTORY OF JAVA
+	2)PROPERTIES/FEATURES OF JAVA
+	3)APPLICATIONS OF JAVA /WHERE IT IS USED..?
+    4)SOFTWARES USED FOR JAVA & LINKS
+    5)HOW JAVA CODINGS RUN..?
+	
+HISTORY OF JAVA
+===============
+    * Java is a high level(Plain English), robust(Bug free), object-oriented and
+      secure programming language.
+    * Java was developed by Sun Microsystems (now part of Oracle)
+      in the year 1995.
+    * James Gosling with his team invented Java & hence
+      known as the father of Java
+    * Java is an island in Indonesia where the
+      first coffee was produced (called Java coffee).
+    * James Gosling suggested name "Java" while having a cup of coffee
+      nearby his office. (First they taught of naming it as Oak but it was already registered name)
+	* First Java Version Was Released in January 23,1996(JDK-1.0.2) also Called Java-1
+     
+PROPERTIES/FEATURES OF JAVA
+===========================
+    1.SIMPLE:Easy to learn and understand.
+    2.OBJECT-ORIENTED :Organizes our software as a combination of different types of objects with both data and behavior.
+    3.PORTABLE: We can carry the Java bytecode to any platform (WEB, Mobile Web or Apps no extra coding required)
+    4.PLATFORM INDEPENDENT : Once compliled We can Run Java Program(bytecode) on any OS (Mac, Linux,Windows etc..,)
+    5.SECURED:We can develop virus-free systems(Java has it's own runtime environment).
+    6.ROBUST: Strong memory,management(Memory will be cleared automatically by garbage collector once done)&Exception handling
+    7.ARCHITECTURE NEUTRAL:Java occupy same memory for both 32bit & 64bit machines but in C we have different memory requirement
+    8.HIGH PERFORMANCE:Java is faster than other traditional interpreted programming languages like python(because Java bytecode is "close"to native code
+    9.MULTITHREADED:We can write Java programs that deal with many tasks at once by defining multiple threads(Parallel executions of many tasks)
+    10.DISTRIBUTED:We can access any files by calling the methods from any machine on the internet(Eg: File Sharing over network or Anydesk).
+    11.DYNAMIC:It supports the dynamic loading of classes. It means classes are loaded on demand.(All Classes are not loaded in one go)
+
+APPLICATIONS OF JAVA /WHERE IT IS USED..?
+=========================================
+Where Java is used?
+    Desktop Applications such as acrobat reader, media player, antivirus, etc.
+    Web Applications such as irctc.co.in, javatpoint.com, etc.
+    Enterprise Applications such as banking applications.
+    Mobile
+    Embedded System :Embedded C House Automation 
+    Smart Card
+    Robotics
+    Games, etc.
+	
+SOFTWARES USED FOR JAVA & LINKS
+================================
+ ORACLE(JDK-java developement kit)-VERSIONS LIKE jdk8,11,13,16,17,18,19 etc..,                    ECLIPSE(IDE-integrated developement environment)
+ links:-                                                                                          links:-
+ 1. https://www.oracle.com/in/java/technologies/javase/jdk11-archieve-downloads.html              1. https://eclipse.org/downloads/eclipse=packages/
+ 2. https://www.oracle.com/java/technologies/downloads/#jdk19-windows
+ 2. https://docs.oracle.com/javase/8/docs/technotes/guides/install/install_overview.html
+
+HOW JAVA CODINGS RUN..?
+=======================
+COMPILER:(javac)
+----------------
+- A compiler is a translator that converts the high-level language into the machine language.
+- High-level language is written by a developer and machine language can be understood by the processor.
+- Check whether the program we wrote is according to Java Rules & Syntax.
+- If Rules are followed then convert program to byte code(.class file / binary).
+- If Rules are not followed throws proper message about the mistake we did.
+- Compiler is used to show errors to the programmer.
+- Converts Source code to Object Programs.
+
+
+             
+			 HIGH-LEVEL             --------------             MACHINE
+			 LANGUAGE       ----->> \\ COMPILER // ------->>   LANGUAGE(byte codes/binary code i.e.., 0 & 1)
+			 (BY:                     ----------               (BY:
+			 DEVELOPER)                                         PROCESSOR)
+			 
+			 
+
+JVM - JAVA VIRTUAL MACHINE :
+----------------------------
+- JVM is a program responsible for executing the java program line by line, hence it is also known as an interpreter.
+- JVM is the one that actually calls the main method (Starting point) present in a java code.
+- It is a specification that provides runtime environment in which java bytecode can be executed. 
+- Its implementation is known as JRE (Java Runtime Environment).
+- Function Of JVM :-
+                       ->Loads code
+                       ->Verifies code
+                       ->Executes code
+                       ->Provides runtime environment
+					   
+JRE - JAVA RUNTIME ENVIRONMENT :
+--------------------------------
+- JRE is an installation package that provides an environment to only run(not develop) the java program(or application)onto your machine.
+- JRE Includes JVM + Other Support Libraries to java Program / Application
+
+JDK - JAVA DEVELOPEMENT KIT :
+-----------------------------
+- JDK is a Kit that provides the environment to develop and execute(run) the Java program.
+- JDK is a kit/Package that consists of mainly two things a)JRE  & b)Developement Tools (Like compiler, Help documents etc..,)
+
+              [JDK
+			 {Java 
+			 Developement  ====> {JRE along with JVM} + {Compiler} + {Developement Tools} + {Other Libraries}
+			  Kit}]
+
+HEAP MEMORY :
+-------------
+- Heap Memory is used for Dynamic Memory Allocation of Java objects and 
+  JRE classes that are created during the execution of a Java program.
+			  
+
+                                
+                           

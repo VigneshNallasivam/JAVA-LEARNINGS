@@ -1,0 +1,259 @@
+//OPERATORS
+
+                                                             OPERATORS
+															 =========
+-Operators are special symbols that perform specific operations like arithmetic,logical etc.., on one, two, or three operands(variable name), and then return a result.
+-Operators are symbols that perform operations on variables and values.
+-Operator in Java is a symbol that is used to perform operations.
+
+TYPES OF OPERATORS:-(7 Types)
+===================
+=>Unary Operator
+=>Arithmetic Operator
+=>Shift Operator
+=>Relational/Comparision Operator
+=>Logical & Bitwise Operator
+=>Ternary Operator 
+=>Assignment Operator.
+=>Double-colon Operator
+
+EXPLANATION:-
+============
+1)ARITHMETIC OPERATORS:(Needs 2/More Operands)
+=======================
+ADDITION OPERATOR               ==> '+'     ==>Performs Add Opertion
+SUBTRACTION OPERATOR            ==> '-'     ==>Performs subtraction operation
+MULTIPLICATION OPERATOR         ==> '*'     ==>Performs Multiplication operation
+DIVISION OPERATOR               ==> '/'     ==>performs dividing operation to get Quotient
+MODULO OPERATOR                 ==> '%'     ==>Performs dividing operation to get Remainder
+
+Example:-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		int a,b;
+		int sum,sub,mul;
+		float quotient,remainder;
+		a=10;
+        b=20;
+        
+        sum = a+b;
+        System.out.println("ADDITION : " +sum);
+        
+        sub = a-b;
+        System.out.println("SUBTRACTION : " +sub);
+        
+        mul = a*b;
+        System.out.println("MULTIPLICATION : " +mul);
+        
+        quotient = b/a;
+        System.out.println("DIVISION : " +quotient);
+        
+        remainder = b%a;
+        System.out.println("MODULO : " +remainder);
+	}
+}
+OUTPUT>>
+--------
+ADDITION : 30
+SUBTRACTION : -10
+MULTIPLICATION : 200
+DIVISION : 2.0
+MODULO : 0.0
+
+2)UNARY OPERATORS:(Needs Only 1 Operand)
+==================
+PRE-FIX OPERATORS  => ++expr / expr=expr+1 (pre-increment operator) 
+                      --expr / expr=expr-1 (pre-decrement operator)
+				
+POST-FIX OPERATORS => expr++(post-increment operator)
+                      expr--(post-decrement operator)
+					  
+PRE-INCREMENT / DECREMENT : Performs the increment/decrement before the actual operation.
+POST INCREMENT / DECREMENT: Performs the actual operation & then increment/decrement is performed.
+
+Example:-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		int A;
+		int B;
+		int C;
+		int D;
+		
+		C = A + B++;
+		System.out.println("The Value of C Is : " +C);
+		
+		D = A + ++B;
+		System.out.println("The Value of C Is : " +D);
+		
+		
+		
+		
+		
+OUTPUT>>
+--------
+
+
+3)SHIFT OPERATORS: (Two Operands Needed)
+==================
+=>RIGHT SHIFT OPERATOR(>>)
+      1st.number/(2^2nd.number)
+	  
+=>LEFT SHIFT OPERATOR(<<)
+      1st.number*(2^2nd.number)
+	 
+Example:-
+---------
+    public class Sample
+	{  
+    public static void main(String args[])
+	{  
+	System.out.println("---RIGHT SHIFT OPERATION---");
+    System.out.println(10>>2);  //10/2^2 =10/4 =2  
+    System.out.println(20>>2);  //20/2^2 =20/4 =5  
+    System.out.println(20>>3);  //20/2^3 =20/8 =2  
+	
+	System.out.println("---LEFT SHIFT OPERATION---");
+	System.out.println(10<<2);  //10*2^2 =10*4 =40  
+    System.out.println(10<<3);  //10*2^3 =10*8 =80  
+    System.out.println(20<<2);  //20*2^2 =20*4 =80  
+    }
+	}
+OUTPUT>>
+--------
+---RIGHT SHIFT OPERATION---
+2
+5
+2
+---LEFT SHIFT OPERATION---
+40
+80
+80
+
+
+4)ASSIGNMENT OPERATORS:(Both Sides of Operator, Operands are Needed)
+=======================
+Assignment Operator ==> '='(equal to) ==> It is used to assign the value on its right to the operand on its left.
+	
+Example:-
+--------
+public class Sample
+{
+public static void main(String[] args)
+{
+String A = "hai BEN";
+int B = 10;
+System.out.println("OUTPUT : " +A  +" " +B);
+}
+}
+OUTPUT>>
+--------
+OUTPUT : hai BEN 10
+
+5)TERNARY OPERATOR:(Two Operands Needed)
+===================
+=>Used as one line replacement for if-else statement.
+
+Syntax:-
+------- 
+     
+	  Variable = (Expr1/condition) ? Expr2 : Expr3
+	  
+	                (OR)
+					
+	  "Expr2 is executed if Expr1 is true else Expr3 is executed."
+       
+	   if(Expr1)
+       {
+        variable = Expr2;
+       }
+      else
+      {
+       variable = Expr3;
+      }	 
+Example:-
+---------
+public class Sample 
+{
+    public static void main(String[] args) 
+	{
+		int age = 25;
+		String Vote = (age>=18) ? ("Eligible") : ("Not-Eligible");
+		System.out.println("Are You Eligible Candidate for Voting Yes/No..!! : " +Vote);
+	}
+}	
+OUTPUT>>
+--------
+Are You Eligible Candidate for Voting Yes/No..!! : Eligible  
+  
+  
+6)LOGICAL OPERATORS:(Two Operands Needed)
+====================
+=>Performs Logical Operation AND,OR,NOT 
+=>It is Mainly used to Check Whether the Expression is True Or False
+=>Follows Truth Table Operation. 
+
+AND  ==>    '&&'  ==>Performs Logical Multiplication AND Operation.
+OR   ==>    '||'  ==>Performs Logical Addition OR Operation.
+Not  ==>    '!'   ==>Performs Inverting Operation / Complement Operation, Changes True To False & ViceVersa.
+
+TRUTH-TABLE
+-----------
+ A truth table is a tabular representation of all the combinations of input values and their corresponding outputs.
+ Used to determine if a compound Statement is true / false.
+ 
+   A   |     B    |     A && B   |     A || B   |    !A     |
+-------|----------|--------------|--------------|-----------|
+   0   |     0    |       0      |       0      |     1     |
+   0   |     1    |       0      |       1      |     1     |
+   1   |     0    |       0      |       1      |     0     |
+   1   |     1    |       1      |       1      |     0     |
+   
+Conclusion from Truth-Table :-
+==============================
+Take '1' as True.
+Take '0' as False.
+ 
+   => A && B - From Table if Given Both inputs Are True, Then the result will be True.
+   => A || B - From Table if Given Any one input is True, Then the result will be True.
+   
+7)DOUBLE-COLON OPERATORS:(Two Operands Needed)()
+========================
+=>It is also called as 'Method Reference Operator'.
+=>To call a method by referring to it with the help of its class directly
+=>They behave exactly as the lambda expressions.
+=>The only difference it has from lambda expressions is that this uses direct reference to the method by name, 
+  instead of providing a delegate to the method.
+
+Syntax:-
+--------
+(objectOfClass::methodName)
+
+Example:-
+---------
+import java.util.ArrayList;
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		ArrayList<Integer> list = new ArrayList<>();
+		list.add(10);
+		list.add(20);
+		list.add(30);
+		list.add(40);
+		list.add(50);
+		list.forEach(System.out::println);
+	}
+}
+OUTPUT>>
+--------
+10
+20
+30
+40
+50

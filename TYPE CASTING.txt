@@ -1,0 +1,77 @@
+//TYPE CASTING 
+
+
+
+                                                    TYPE CASTING
+													============
+- Convert a value from one data type to another data type is known as type casting.
+
+TYPES :-
+--------
+=>Widening Type Casting :
+                        -Converting a lower data type into a higher one is called widening type casting.
+						-It is also known as implicit conversion or casting down.
+						-It is done automatically. 
+						-It is safe because there is no chance to lose data.
+						_______________________________________________________
+						byte -> short -> char -> int -> long -> float -> double  
+                        -------------------------------------------------------
+						
+=>Narrowing Type Casting :
+                        -Converting a higher data type into a lower one is called narrowing type casting.
+						-It is also known as explicit conversion or casting up.
+						-It is done manually by the programmer.
+						-If we do not perform casting then the compiler reports a compile-time error.
+						_______________________________________________________
+						double -> float -> long -> int -> char -> short -> byte 
+						-------------------------------------------------------
+						
+Example:-
+---------
+//WIDENING TYPE CASTING PROGRAM
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		int num1 = 75;
+		double num2 = num1;
+		System.out.println("Before Type Casting / Casting Down : " +num1);
+		System.out.println("After Type Casting / Casting Down : " +num2);
+		
+		long num3 = 733937023;
+		double num4 = num3;
+		System.out.println("Before Type Casting / Casting Down : " +num3);
+		System.out.println("After Type Casting / Casting Down : " +num4);
+	}
+}
+OUTPUT>>
+--------
+Before Type Casting / Casting Down : 75
+After Type Casting / Casting Down : 75.0
+Before Type Casting / Casting Down : 733937023
+After Type Casting / Casting Down : 7.33937023E8
+
+Example:-
+---------
+//NARROWING TYPE CASTING PROGRAM
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		long numA = 733937023; 
+		int value = (int)numA;
+		System.out.println("Before Type Casting / Casting Up : "+numA);
+		System.out.println("After Type Casting / Casting Up : "+value);
+
+		double numB = 73393700239566525472.00;
+		byte values = (byte)numB;
+		System.out.println("Before Type Casting / Casting Up : "+numB);
+		System.out.println("After Type Casting / Casting Up : "+values);
+	}
+}
+OUTPUT>>
+--------
+Before Type Casting / Casting Up : 733937023
+After Type Casting / Casting Up : 733937023
+Before Type Casting / Casting Up : 7.339370023956653E19
+After Type Casting / Casting Up : -1

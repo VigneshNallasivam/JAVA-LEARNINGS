@@ -1,0 +1,98 @@
+//SCANNER                                                             
+
+															   SCANNER
+															   =======
+													 (import java.util.Scanner;)
+													    (import java.util.*;)
+														
+			   (Scanner is a class in  java.util  package used for obtaining the input of the primitive types like int, double, etc. and strings. 
+				It is the easiest way to read input from a user in a Java program,
+				Though not very efficient if you want an input method for scenarios where time is a constraint like in competitive programming.)
+				
+USAGE OF SCANNER :-
+===================
+nextBoolean() 	 Reads a BOOLEAN value from the user
+nextByte() 	     Reads a BYTE value from the user
+nextDouble() 	 Reads a DOUBLE value from the user
+nextFloat() 	 Reads a FLOAT value from the user
+nextInt() 	     Reads a INT value from the user
+nextLine() 	     Reads a STRING value from the user
+nextLong() 	     Reads a LONG value from the user
+nextShort()  	 Reads a SHORT value from the user
+next()           Reads a WORD from the user or String
+next().charAt(0) Reads a CHARACTER from the user
+
+nextBigInteger()  Reads the BIG INTEGER value from the user
+nextBigDecimal()  Reads the BIG DECIMAL value from the user
+
+SYNTAX:-
+-------
+-Reference Variable must be 'scan' for Scanner  
+
+Scanner scan = new Scanner(System.in);            //syntax
+datatype variablename = scan.nextdatatype();      //usage
+
+
+Example:-
+--------
+import java.util.Scanner;
+public class Sample
+{
+public static void main(String[] args)
+{
+Scanner scan = new Scanner(System.in);
+System.out.println("**********ENTER THE DETAILS OF COLLEGE STUDENT*************");
+
+System.out.println();
+System.out.println();
+
+System.out.println("ENTER YOUR NAME");
+String name = scan.next();
+
+System.out.println("ENTER YOUR AGE");
+int age = scan.nextInt();
+
+System.out.println("ENTER YOUR GENDER");
+String gender = scan.next();
+
+System.out.println("ENTER YOUR COLLEGE NAME");
+String clgName = scan.next();
+
+System.out.println("ENTER YOUR ID NUMBER");
+String id = scan.next();
+
+System.out.println("ENTER YOUR DEPARTMENT");
+String dept = scan.next();
+
+System.out.println("ENTER YOUR REGISTER NUMBER");
+String regNum = scan.next();
+
+System.out.println();
+System.out.println();
+
+System.out.println("**************DETAILS OF COLLEGE STUDENT*********************");
+System.out.println(name);
+System.out.println(age);
+System.out.println(gender);
+System.out.println(clgName);
+System.out.println(id);
+System.out.println(dept);
+System.out.println(regNum);
+System.out.println("*************************************************************");
+}
+}
+
+OUTPUT>>
+--------
+**************DETAILS OF COLLEGE STUDENT*********************
+VigneshWaran.N
+24
+MALE
+Vellalar/College
+15ECE106
+Electronics&Communication(ECE)
+732915106104
+*************************************************************
+
+
+					

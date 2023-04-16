@@ -1,0 +1,254 @@
+//KEYWORDS
+
+
+                                                           KEYWORDS
+												           ========
+- keywords are also known as reserved words.
+- Keywords are particular words that act as a key to a code.
+- Keywords have Standard & pre-defined meaning, can only be used for intended purpose.
+- keywords always starts with small letters.
+
+LIST OF KEYWORDS:-
+=================
+1)import :-
+-----------
+         Importing the source file from java packages(library file) to be reffered later without naming their packages.
+		 
+2)public :-
+-----------
+         Access Specifier
+		 
+3)protected :-
+--------------
+            Access Specifier
+			
+4)default :-
+------------
+          Access Specifier & used in Switch-case
+		  
+5)private :-
+------------
+          Access Specifier
+		  
+6)static :-
+-----------
+         For Memory Management, creates only one copy regardless of how many instances exist in that class.
+		 
+7)void :-
+---------
+       The void keyword is used to declare that a method does not return any value.
+	   
+8)new :-
+--------
+      Creates new objects & it is used in many fields for creation of new array,string etc..,& in their particular fields.
+	  
+9)package :-
+------------
+          Mentions Entire available Java Packages.
+         
+10)int :-
+---------
+       One of the Integer type Data-type.
+11)short :-
+-----------
+         One of the Integer type Data-type.
+		 
+12)long :-
+----------
+        One of the Integer type Data-type.
+		
+13)byte :-
+----------
+         One of the Integer type Data-type.
+		 
+14)float :-
+-----------
+         One of the Floating type Data-type.
+		 
+15)double :-
+------------
+          One of the Floating type Data-type.
+		  
+16)boolean :-
+-------------
+           One of the Non-Numeric type Data-type.
+		   
+17)switch :-
+------------
+         Used in Decision Making Statements for Switching into required Case Value.
+		 
+18)case :-
+----------
+        Used in Decision Making Statements for taking different logic/function from main condition looking possibility for switch operation to perform
+
+19)break :-
+-----------
+         To cut from the Particular case operation.
+		 
+20)try :-
+---------
+       To deal with Particular exception in Excetion Handling Operations.
+	   
+21)catch :-
+-----------
+         To overcome exception after try block.
+		 
+22)abstract :-
+--------------
+            Keyword used in Abstraction to implement methods without logic.
+			
+23)this :-
+----------
+        To provide instance to a variable in a constructor.
+		
+24)final :-
+-----------
+         The 'final' keyword in java is used to restrict the user that the value cannot be changed in the future.
+		 
+25)finally :-
+-------------
+           Though the exception is handled in the catch block or not finally keyword is used to perform remaining functions in the class.
+		   
+26)throw :-
+-----------
+         The "throw" keyword is used to throw an exception.
+         
+27)throws :-
+------------
+          The "throws" keyword is used to declare exceptions. 
+          It specifies that there may occur an exception in the method.
+		  
+28)super :-
+-----------
+         'super' keyword is used in inheritance to access the Parent class.
+		 
+29)enum :-
+----------
+        Used to declare an enumerated type. Enumerations extend the base class.
+		
+30)do :-
+--------
+      The do keyword is used in conjunction with while to create a do-while loop, 
+	  which executes a block of statements associated with the loop and then tests a boolean expression associated with the while.
+
+31)while :-
+-----------
+         The while keyword is used to create a while loop, 
+		 which tests a boolean expression and executes the block of statements associated with the loop if the expression evaluates to true,
+		 this continues until the expression evaluates to false. 
+		 This keyword can also be used to create a do-while loop
+		 
+32)if :-
+--------
+      This checks boolean if it is true goes inside 'if' otherwise goes inside 'else'.
+	  
+33)else :-
+----------
+        This checks boolean if it is true goes inside 'if' otherwise goes inside 'else'.
+		
+34)for :-
+---------
+       This 'for' keyword is used for forming the for loop where it has initialization,condition,updation.
+	   
+35)synchronized :-
+------------------
+                Used in the declaration of a method or code block to acquire the mutex lock for an object while the current thread executes the code.
+
+36)volatile :-
+--------------
+            Used in field declarations to guarantee visibility of changes to variables across threads.
+			
+37)transient :-
+---------------
+             Declares that an instance field is not part of the default serialized form of an object.
+38)return :-
+------------
+           Returns the value of data-type mentioned in the function.
+		   
+39)interface :-
+---------------
+             This Keyword is used in an Abstraction to create the block of non defined method declarations.
+			 
+40)native :-
+------------
+          Used in method declarations to specify that the method is not implemented in the same Java source file, but rather in another language.
+
+41)extends :-
+-------------
+           Used in Inheritance to derive a child class from a parent class.
+		   
+42)implements :-
+----------------
+              Used in Abstraction to implement the interface into class.
+			  
+43)instanceof :-
+----------------
+              A binary operator that takes an object reference as its first operand and a class or interface as its second operand and produces a boolean result.
+			  
+44)goto :-(unused but reserved)
+----------
+        This keyword is used to go the block of function inbetween executing the line by line coding.
+		
+		
+45)const :-(Unused but reserved)
+-----------
+         const keyword is same as 'final' keyword but not used in java.
+		 
+46)class :-
+-----------
+         This keyword creates the lay-out for created functions & objects.
+		 
+47)assert :-
+------------
+          An assertion allows testing the correctness of any assumptions that have been made in the program. 
+		  
+48)strictfp :-
+--------------
+            It is used in java for restricting floating-point calculations 
+			And ensuring the same result on every platform while performing operations in the floating-point variable.
+			
+49)true :-
+----------
+        A boolean type result
+		
+50)false :-
+-----------
+         A boolean type result
+51)null :-
+----------
+        A reference literal value.
+		
+52)continue :-
+--------------
+            Used to resume program execution at the end of the current loop body. 
+			If followed by a label, continue resumes execution at the end of the enclosing labeled loop body.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

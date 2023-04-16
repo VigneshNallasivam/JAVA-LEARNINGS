@@ -1,0 +1,105 @@
+//SAMPLE CODINGS-6
+
+
+
+                                              SAMPLE CODINGS-6(Pattern-Printing)
+                                              ==================================
+EXAMPLE-1:-
+===========
+//SINGLE-LINE(COLUMN)
+public class Sample
+{
+    public static void main(String[] args)
+    {
+        for(int i=0;i<5;i++)
+        {
+            System.out.println("*");
+        }
+
+    }
+}
+OUTPUT>>
+--------
+*
+*
+*
+*
+*
+
+EXAMPLE-2:-
+===========
+//MULTIPLE-ROWS&COLUMNS 
+public class Sample
+{
+    public static void main(String[] args)
+    {
+        for(int i=0;i<5;i++)
+        {
+            for(int j=0;j<5;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+}
+OUTPUT>>
+--------
+*****
+*****
+*****
+*****
+*****
+
+EXAMPLE-3:-
+===========
+//RIGHT-ANGLE TRIANGLE PATTERN
+public class Sample
+{
+    public static void main(String[] args)
+    {
+        for(int i=0;i<5;i++)
+        {
+            for(int j=0;j<=i;j++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    }
+}
+OUTPUT>>
+--------
+*
+**
+***
+****
+*****
+                   (OR)
+
+EXAMPLE-4:-
+===========
+//RIGHT-ANGLE TRIANGLE PATTERN(FOR Numbers)
+public class Sample
+{
+    public static void main(String[] args)
+    {
+        for(int i=1;i<5;i++)
+        {
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(j);
+            }
+            System.out.println();
+        }
+
+    }
+}
+OUTPUT>>
+--------	
+1
+12
+123
+1234			   

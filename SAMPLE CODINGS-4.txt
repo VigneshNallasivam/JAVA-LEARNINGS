@@ -1,0 +1,282 @@
+//SAMPLE CODINGS
+ 
+ 
+                                    SAMPLE CODINGS-4
+									================
+Example:-
+---------
+//PRINTING OF 2-TABLES USING FOR-LOOP
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		for(int i=1 ; i<6 ;i++)
+		{
+			int result = 2 * i;
+			System.out.println("2 x "+i+" = "+result);
+		}
+	}
+}
+OUTPUT>>
+--------
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+
+Example:-
+---------
+//PRINTING OF 2-TABLES USING ARRAY
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		int array[]= {1,2,3,4,5};
+		for(int result:array)
+		{
+			int multiply = 2*result;
+			System.out.println("2 x "+result+" = "+multiply);
+		}
+	}
+}
+OUTPUT>>
+--------
+2 x 1 = 2
+2 x 2 = 4
+2 x 3 = 6
+2 x 4 = 8
+2 x 5 = 10
+
+Example:-
+---------
+//GETTING CURRENT DATE & TIME USING IMPORTING LIBRARY FUNCTIONS
+import java.text.SimpleDateFormat;
+import java.util.Date;
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy  HH:mm:ss");//if We change HH to hh(24hour format will be chaged to 12hour format)
+		Date date = new Date();
+		System.out.println(format.format(date));
+	}
+}
+OUTPUT>>
+--------
+02/01/2023  16:37:50
+
+Example:-
+---------
+//CODING TO GET SEPERATE DATE & TIME
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		Date date = new Date();
+		SimpleDateFormat format1 = new SimpleDateFormat("dd/MM/yyyy");
+		System.out.println("DATE : "+format1.format(date));
+		SimpleDateFormat format2 = new SimpleDateFormat("HH:mm:ss");
+		System.out.println("TIME : "+format2.format(date));
+	}
+} 
+OUTPUT>>
+--------
+DATE : 02/01/2023
+TIME : 16:47:49
+
+
+Example:-
+---------
+//GETTING CURRENT DATE & TIME USING IMPORTING LIBRARY FUNCTIONS
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		java.util.Date date = new java.util.Date();
+		System.out.println(date);
+	}
+}
+OUTPUT>>
+--------
+Mon Jan 02 16:41:35 IST 2023
+
+
+
+Example:-
+---------
+//GENERATING RANDOM DATE & TIME USING IMPORTING LIBRARY FUNCTIONS
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		Random random = new Random();
+		Date date = new Date(random.nextLong());
+		SimpleDateFormat format = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+		System.out.println("DATE : "+format.format(date));
+	}
+}
+OUTPUT>>
+--------
+DATE : 06/01/91 01:29:42
+
+
+Example:-
+---------
+//GENERATING MULTIPLE RANDOM DATE & TIME USING IMPORTING LIBRARY FUNCTIONS
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Random;
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		Random random = new Random();
+		for(int i=1;i<=5;i++)
+		{
+			Date date = new Date(random.nextLong());
+			SimpleDateFormat format = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
+			System.out.println("DATE : "+format.format(date));
+		}
+	}
+}
+OUTPUT>>
+--------
+DATE : 20/08/68 21:49:33
+DATE : 05/05/16 09:53:31
+DATE : 27/12/15 04:27:21
+DATE : 15/03/16 19:53:04
+DATE : 02/08/72 18:22:16
+
+
+Example:-
+---------
+//GETTING THE COUNT OF VOWELS IN AN SENTENCE
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		String str = "Hello Everyone..!,Good Morning To All,How you Doin..!";
+		char ch[] = str.toCharArray();
+		int aCount =0;
+		int eCount =0;
+		int iCount =0;
+		int oCount =0;
+		int uCount =0;
+		for(int i=0 ; i<ch.length ; i++)
+		{
+			if(ch[i]=='a'||ch[i]=='A')
+			{
+				aCount++;
+			}
+			if(ch[i]=='e'||ch[i]=='E')
+			{
+				eCount++;
+			}
+			if(ch[i]=='i'||ch[i]=='I')
+			{
+				iCount++;
+			}
+			if(ch[i]=='o'||ch[i]=='O')
+			{
+				oCount++;
+			}
+			if(ch[i]=='u'||ch[i]=='U')
+			{
+				uCount++;
+			}
+		}
+		System.out.println("Count of Vowel 'a' Is : "+aCount );
+		System.out.println("Count of Vowel 'e' Is : "+eCount );
+		System.out.println("Count of Vowel 'i' Is : "+iCount );
+		System.out.println("Count of Vowel 'o' Is : "+oCount );
+		System.out.println("Count of Vowel 'u' Is : "+uCount );
+	}
+}
+OUTPUT>>
+--------
+Count of Vowel 'a' Is : 1
+Count of Vowel 'e' Is : 4
+Count of Vowel 'i' Is : 2
+Count of Vowel 'o' Is : 9
+Count of Vowel 'u' Is : 1
+
+
+Example:-
+---------
+//SMALLEST ELEMENT IN AN ARRAY
+public class Sample 
+{
+	public static void main(String[] args) 
+	{  
+		int [] array = {50,25,30,75,125,100};  
+		int min = array[0];  
+		for (int i = 0; i < array.length; i++)
+		{  
+			if(array[i] < min) 
+			{
+				min = array[i];
+			}
+		}  
+		System.out.println("Smallest element present in given array: " + min);  
+	}  
+}
+OUTPUT>>
+--------
+Smallest element present in given array: 25
+
+
+Example:-
+---------
+//LARGEST ELEMENT IN AN ARRAY
+public class Sample 
+{
+	public static void main(String[] args) 
+	{
+		int[] array = new int[] { 25, 50, 75, 125, 100 };
+		int max = array[0];
+		for (int i = 0; i < array.length; i++) 
+		{
+			if (array[i] > max)
+			{
+				max = array[i];
+			}
+		}
+		System.out.println("Largest element present in given array: " + max);
+	}
+}
+OUTPUT>>
+--------
+Largest element present in given array: 125
+
+Example:-
+---------
+//SECOND LARGEST ELEMENT IN AN ARRAY
+public class Sample 
+{
+	public static void main(String[] args) 
+	{
+		int[] array = { 25, 50, 175, 125, 100 };
+		int temp;
+		for(int i=0 ;i<array.length;i++)
+		{
+			for(int j=i+1 ;j<array.length;j++)
+			{
+				if(array[i]>array[j])    //'<'Less than for 2nd Smallest Element in an Array
+				{
+					temp = array[i];
+					array[i]=array[j];
+					array[j]=temp;
+				}
+			}
+		}
+		int result = array[array.length-2];
+		System.out.println("Second Largest Element in an Array Is : "+result);
+	}
+}
+OUTPUT>>
+--------
+Second Largest Element in an Array Is : 125

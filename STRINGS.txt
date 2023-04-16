@@ -1,0 +1,1099 @@
+//STRINGS
+
+                                                                     STRINGS
+																	 =======
+- A String is a 'Sequence of Characters'/'Group of Collection of Characters'
+- A Java string is a sequence of characters that exists as an object of the class 'java.lang'.
+- Always Strings are presented inside double qoutes " ",while a character in Single quotes ' '.
+- Objects can be converted into Strings Using 2 methods 
+                                        => toString()
+										=> String.valueOf()
+
+CREATION OF STRING:
+-------------------
+By Two Ways
+         ->By Literal/Normal declaration & Assigning: 
+		      Eg:- String str = "welcome! Hai! Good Morning!!";
+			  
+		 ->By 'new' Keyword: 
+		      Eg:- String str = new String("Welcome"); 
+
+EXAMPLE:-
+--------
+public class Sample
+{  
+    public static void main(String args[])
+    {    
+    String str1="java";
+    char chr[]={'s','t','r','i','n','g','s'};    
+    String str2=new String(chr);    
+    String str3=new String("example");
+    System.out.println(str1);    
+    System.out.println(str2);    
+    System.out.println(str3);    
+    }    
+}
+OUTPUT>>
+--------
+java
+strings
+example
+
+Example:-
+---------
+//CONVERSION OF OBJECT TO STRING
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		Object obj = 10;
+		
+		//METHOD-1
+		String str = obj.toString();
+		System.out.println("String Value Is : "+str);
+		
+		//METHOD-2
+		String str2 = String.valueOf(obj);
+		System.out.println("String Value Is : "+str2);
+	}
+}
+OUTPUT>>
+--------
+String Value Is : 10
+String Value Is : 10
+
+Example:-
+---------
+//CONVERSION OF OBJECT TO STRING
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		HashMap<String,Integer> map = new HashMap<>();
+		map.put("Raghav", 10);
+		map.put("Vignesh", 20);
+		map.put("Sathish", 30);
+		map.put("Vinith", 40);
+		map.put("Praveen", 50);
+
+		//METHOD-1
+		String str = map.toString();
+		System.out.println("String Value Is : "+str);
+
+		//METHOD-2
+		String str2 = String.valueOf(map);
+		System.out.println("String Value Is : "+str2);
+	}
+}
+OUTPUT>>
+--------
+String Value Is : {Raghav=10, Sathish=30, Vignesh=20, Vinith=40, Praveen=50}
+String Value Is : {Raghav=10, Sathish=30, Vignesh=20, Vinith=40, Praveen=50}
+
+ 
+ 
+java.lang.String CLASS METHODS:-
+===============================
+
+SOME USES OF STRING CLASS:-
+===========================
+STRING-BUFFER/STRING-BULIDER:-
+--------------------------------
+=>Mainly used to Overcome the disadvantage of String that it always have fixed size and Im-mutable.
+=>In String-buffer/String-builder Size is Growable and Mutable.
+=>It creates an empty String-buffer/String-builder with the initial capacity of 16.
+
+STRING-BUFFER Vs STRING-BULIDER:-
+----------------------------------
+____________________________________________________________________
+String-Buffer                 |           String-Builder
+--------------------------------------------------------------------
+(1)Synchronized(Thread-Safe)  |(1)Non-Synchronized(Non Thread-Safe)
+                              |
+(2)Two threads can't call     |(2)Two threads can call   
+Methods Simultaneously        |   Methods Simultaneously
+                              |
+(3)Less-Efficient             |(3)More-Efficient
+                              |
+(4)Introduced in Java-1.0     |(4)Introduced in Java-1.5
+______________________________|______________________________________
+
+
+STRING-BUFFER/STRING-BULIDER METHODS
+------------------------------------
+# append()  //Concatination //taking input
+# insert()
+# replace()
+# delete()
+# reverse()
+# capacity()
+# ensureCapacity()
+
+EXAMPLE:1
+---------
+//CODING THAT EXPLAINS THE METHODS OF String-Builder/String-Buffer
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		StringBuffer strbuffer = new StringBuffer("_OmG..,");
+		strbuffer.append("Oops..!! Sry..!");
+		System.out.println(strbuffer);
+		
+		StringBuffer strbuffer1 = new StringBuffer("Hai--");
+		strbuffer1.insert(5,"Hello");
+		System.out.println(strbuffer1);
+		
+		StringBuffer strbuffer2 = new StringBuffer("God");
+		strbuffer2.replace(1,2,"Ba");
+		System.out.println(strbuffer2);
+		
+		StringBuffer strbuffer3 = new StringBuffer("froog");
+		strbuffer3.delete(1,3);
+		System.out.println(strbuffer3);
+		
+		StringBuffer strbuffer4 = new StringBuffer("Tattoo");
+		strbuffer4.reverse();
+		System.out.println(strbuffer4);
+		
+		StringBuffer strbuffer5 = new StringBuffer();
+		System.out.println(strbuffer5.capacity());    //16
+		strbuffer5.append("Ahoy");               
+		System.out.println(strbuffer5.capacity());    //Still 16 Only
+		strbuffer5.append("Ahoy Ahoy Ahoy");
+		System.out.println(strbuffer5.capacity());    //Capacity Changed To (OldCapacity*2)+2 i.e..,//34
+		
+		StringBuffer strbuffer6 = new StringBuffer();
+		System.out.println(strbuffer6.capacity());    //16
+		strbuffer6.append("Ahoy");               
+		System.out.println(strbuffer6.capacity());    //Still 16 Only
+		strbuffer6.append("Ahoy Ahoy Ahoy");
+		System.out.println(strbuffer6.capacity());    //Capacity Changed To (OldCapacity*2)+2 i.e..,//34
+		strbuffer6.ensureCapacity(10);
+		System.out.println(strbuffer6.capacity());    //Again 34 Only
+		strbuffer6.ensureCapacity(34);
+		System.out.println(strbuffer6.capacity());    //Again 34 Only
+		strbuffer6.ensureCapacity(35);
+		System.out.println(strbuffer6.capacity());    //Capacity Changed To (OldCapacity*2)+2 i.e..,//70
+		
+	}
+}
+OUTPUT>>
+--------
+_OmG..,Oops..!! Sry..!
+Hai--Hello
+GBad
+fog
+oottaT
+16
+16
+34
+16
+16
+34
+34
+34
+70
+
+toString() FUNCTION :
+=====================
+- The Method toString() is created inside the Class like other normal methods to convert objects to String.
+- If you want to represent any object as a string, toString() method comes into existence.
+- The toString() method returns the String representation of the object.
+- This is Mainly invoked if you try to Print an Object
+- If you print any object, Java compiler internally invokes the toString() method on the object. 
+  So overriding the toString() method, returns the desired output.
+- This is Mainly used in following topics #Constructors
+                                          #Encapsulation(Getter/Setter)/Wrapper Classes
+										  #String-Builder/String-Buffer
+										  #String
+										  #Collections(ArrayList & HashMap)
+                                         
+
+Example:-
+---------
+//WITHOUT USING toString() FUNCTION
+package oops;
+public class Student 
+{
+	int rollno;
+	String name;
+	String city;
+
+	Student(int rollno, String name, String city)
+	{
+		this.rollno = rollno;
+		this.name = name;
+		this.city = city;
+	}
+	
+	public static void main(String[] args)
+	{
+		Student s1 = new Student(100,"Vicky","Erode");
+		Student s2 = new Student(200,"Rocky","Erode");
+		System.out.println(s1);
+		System.out.println(s2);
+	}
+}
+OUTPUT>>
+--------
+oops.Student@2626b418  //'oops' is Package Name //'Student' is Class name //'@2626b418' is hashcode values.
+oops.Student@5a07e868
+As you can see in the above example, printing s1 and s2 prints the hashcode values of the objects,
+But I want to print the values of these objects. 
+Since Java compiler internally calls toString() method, overriding this method will return the specified values.
+
+
+
+Example:-
+---------
+//USING toString() FUNCTION
+package oops;
+public class Student 
+{
+	int rollno;
+	String name;
+	String city;
+
+	Student(int rollno, String name, String city)
+	{
+		this.rollno = rollno;
+		this.name = name;
+		this.city = city;
+	}
+
+	public String toString()
+	{
+		return rollno + " " + name + " " + city;
+	}
+
+	public static void main(String[] args)
+	{
+		Student s1 = new Student(100,"Vicky","Erode");
+		Student s2 = new Student(200,"Rocky","Erode");
+		System.out.println(s1);
+		System.out.println(s2);
+	}
+}
+OUTPUT>>
+--------
+100 Vicky Erode
+200 Rocky Erode
+
+Example:-
+---------
+//SIMPLE CODING USING toString() FUNCTION
+public class Student 
+{
+	String name;
+	int rollNo;
+
+	public String toString()
+	{
+		return ("The Name Is : " +name + "\nThe Roll Number Is : " +rollNo);
+	}
+	public static void main(String args[]) 
+	{
+		Student student =  new Student();
+		student.name = "Rohan";
+		student.rollNo = 34;
+		System.out.println(student);
+	}
+}
+OUTPUT>>
+--------
+The Name Is : Rohan
+The Roll Number Is : 34
+
+
+
+Example:-
+---------
+//toString() METHOD USED TOPICS IN SINGLE CODING
+import java.util.ArrayList;
+import java.util.Scanner;
+public class CreateContacts 
+{
+	String firstName;
+	String lastName;
+	String email;
+	int zip;
+
+	Scanner scanner = new Scanner(System.in);
+	ArrayList<CreateContacts> list = new ArrayList<>();
+
+	
+	/*
+	 * SETTER SECTION
+	 */
+	void setfirstName(String firstName)
+	{
+		this.firstName = firstName;
+	}
+
+	void setlastName(String lastName)
+	{
+		this.lastName = lastName;	
+	}
+
+	void setemail(String email)
+	{
+		this.email = email;
+	}
+
+	void setzip(int zip)
+	{
+		this.zip = zip;
+	}
+	
+	
+	/*
+	 * GETTER SECTION
+	 */
+	String getfirstName()
+	{
+		return firstName;
+	}
+
+	String getlastName()
+	{
+		return lastName;	
+	}
+
+	String getemail()
+	{
+		return email;
+	}
+
+	int getzip()
+	{
+		return zip;
+	}
+
+	
+	
+	
+	/*
+	 * RETURN SECTION 
+	 */
+	public String toString()
+	{
+		return "First Name Is :  " +firstName +"\nLast Name Is :  " +lastName + "\nEmail ID Is : " +email + "\nZip Number Is : " +zip; 
+	}
+
+	
+	
+	
+	/*
+	 * CREATING/USER GETTING INPUT TO CREATE CONTACTS SECTION
+	 */
+	public void create()
+	{
+		CreateContacts contact = new CreateContacts();
+		System.out.println("Enter First Name : ");
+		contact.setfirstName(scanner.next());
+		System.out.println("Enter Last Name : ");
+		contact.setlastName(scanner.next());
+		System.out.println("Enter Email ID : ");
+		contact.setemail(scanner.next());;
+		System.out.println("Enter Zip Number : ");
+		contact.setzip(scanner.nextInt());
+		list.add(contact);
+	}
+
+	
+	
+	
+	/*
+	 * OUTPUT SECTION 
+	 */
+	public void show()
+	{
+		for(int i=0 ; i<list.size() ; i++)
+		{
+			CreateContacts contactz = list.get(i);
+			System.out.println(contactz.toString());
+		}
+
+    }
+	
+
+	
+	
+	/*
+	 * DRIVER/CALLING FUNCTION/MAIN FUNCTION SECTION
+	 */
+	public static void main(String[] args)
+	{
+		CreateContacts obj = new CreateContacts();
+		obj.create();
+		obj.show();
+    }
+
+}
+OUTPUT>>
+--------
+Enter First Name : 
+Vignesh
+Enter Last Name : 
+Waran
+Enter Email ID : 
+vickyshanestark@gmail.com
+Enter Zip Number : 
+638056
+First Name Is :  Vignesh
+Last Name Is :  Waran
+Email ID Is : vickyshanestark@gmail.com
+Zip Number Is : 638056
+
+
+Example:-
+---------
+//toString() FUNCTIONS IN SIMPLE CODINGS
+import java.util.Arrays;
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str[] = {"Rock","Paper","Scissor"};
+		Arrays.sort(str);
+		System.out.println(Arrays.toString(str));
+	}
+}
+OUTPUT>>
+--------
+[Paper, Rock, Scissor]
+
+Example:-
+---------
+//USING OF STRING SPLIT FUNCTION
+import java.util.Arrays;
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		String str = "Rocky Road Rocks Rocks";
+		
+		System.out.println("==>Splitting/Deleting Spaces in a String:-");
+		String str1[] =str.split(" ");
+		System.out.println(Arrays.toString(str1));
+		
+		System.out.println("\n==>Splitting/Deleting Particular Word in A String:-");
+		String str2[] =str.split("Road");
+		System.out.println(Arrays.toString(str2));
+		
+		System.out.println("\n==>Splitting/Deleting Particular Letter in A String:-");
+		String str3[] =str.split("R");
+		System.out.println(Arrays.toString(str3));
+		
+		System.out.println("\n==>Splitting/Deleting Particular (1st)location Space in A String:-");
+		String str6[] =str.split(" ",1);
+		System.out.println(Arrays.toString(str6));
+		
+		System.out.println("\n==>Splitting/Deleting Particular (2nd)location Space in A String:-");
+		String str4[] =str.split(" ",2);
+		System.out.println(Arrays.toString(str4));
+		
+		System.out.println("\n==>Splitting/Deleting Particular (3rd)location Space in A String:-");
+		String str5[] =str.split(" ",3);
+		System.out.println(Arrays.toString(str5));
+		
+		System.out.println("\n==>Splitting/Deleting Particular (4th)location Space in A String:-");
+		String str7[] =str.split(" ",4);
+		System.out.println(Arrays.toString(str7));
+	}
+
+}
+OUTPUT>>
+--------
+==>Splitting/Deleting Spaces in a String:-
+[Rocky, Road, Rocks, Rocks]
+
+==>Splitting/Deleting Particular Word in A String:-
+[Rocky ,  Rocks Rocks]
+
+==>Splitting/Deleting Particular Letter in A String:-
+[, ocky , oad , ocks , ocks]
+
+==>Splitting/Deleting Particular (1st)location Space in A String:-
+[Rocky Road Rocks Rocks]
+
+==>Splitting/Deleting Particular (2nd)location Space in A String:-
+[Rocky, Road Rocks Rocks]
+
+==>Splitting/Deleting Particular (3rd)location Space in A String:-
+[Rocky, Road, Rocks Rocks]
+
+==>Splitting/Deleting Particular (4th)location Space in A String:-
+[Rocky, Road, Rocks, Rocks]
+
+Example:-
+---------
+//CONVERSION OF OBJECT TO STRING
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		//Method-1
+		Object data = "Raghav";
+		System.out.println(data);
+
+		//Method-2
+		String str = data.toString();
+		System.out.println(str);
+
+		//Method-3
+		String str1 = String.valueOf(data);
+		System.out.println(str1);
+	}
+}
+OUTPUT>>
+--------
+Raghav
+Raghav
+Raghav
+
+
+                                                         JAVA STRING METHODS
+														 ===================
+METHOD-1 : charAt()
+===================
+RETURN TYPE : char
+DESCRIPTION : Returns the character at the specified index (position)
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Welcome";
+		char value = str.charAt(0);
+		System.out.println("The index location of character is : "+value);
+	}
+}
+OUTPUT>>
+--------
+The index location of character is : 
+
+METHOD-2 : compareTo()
+======================
+RETURN TYPE : int
+DESCRIPTION : Compares two strings lexicographically 	
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str1 = "Welcome";
+		String str2 = "Message";
+		System.out.println("The Comparision of 2 Strings Is : "+str1.compareTo(str2));
+	}
+}
+OUTPUT>>
+--------
+The Comparision of 2 Strings Is : 10
+
+METHOD-3 : compareToIgnoreCase()
+================================
+RETURN TYPE : int
+DESCRIPTION : Compares two strings lexicographically, ignoring case differences	
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str1 = "Welcome";
+		String str2 = "Message";
+		System.out.println("The Comparision of 2 Strings Is : "+str1.compareToIgnoreCase(str2));
+	}
+	
+}
+OUTPUT>>
+--------
+The Comparision of 2 Strings Is : 10
+
+METHOD-4 : concat()
+===================
+RETURN TYPE : String
+DESCRIPTION : Appends a string to the end of another string 		
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str1 = "Welcome ";
+		String str2 = "Message";
+		System.out.println("The Concatination of 2 Strings Is : "+str1.concat(str2));
+	}
+	
+}
+OUTPUT>>
+--------
+The Concatination of 2 Strings Is : Welcome Message
+
+METHOD-5 : contains()
+=====================
+RETURN TYPE : boolean
+DESCRIPTION : Checks whether a string contains a sequence of characters		
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Welcome ";
+		System.out.println("Given String Contains Characters : "+str.contains("come"));
+	}
+}
+
+OUTPUT>>
+--------
+Given String Contains Characters : true
+
+METHOD-6 : contentEquals() 
+==========================
+RETURN TYPE : boolean
+DESCRIPTION : Checks whether a string contains the exact same sequence of characters of the specified CharSequence or StringBuffer
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Welcome";
+		System.out.println("Given String Contains Characters : "+str.contentEquals("Welcome"));
+	}
+}
+
+OUTPUT>>
+--------
+Given String Contains Characters : true
+
+METHOD-7 : copyValueOf()
+========================
+RETURN TYPE : String
+DESCRIPTION : Returns a String that represents the characters of the character array
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		char cArray[] = {'W','e','l','c','o','m','e'};
+		String str = "";
+		str = str.copyValueOf(cArray,0,7); 
+		System.out.println("The String Value Is : "+str);
+	}
+}
+OUTPUT>>
+--------
+The String Value Is : Welcome
+
+METHOD-8 : endsWith()
+========================
+RETURN TYPE : boolean
+DESCRIPTION : Checks whether a string ends with the specified character(s) 
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Welcome";
+		System.out.println("Whether the given String Ends With Given : "+str.endsWith("come"));
+	}
+}
+OUTPUT>>
+--------
+Whether the given String Ends With Given : true
+
+METHOD-9 : equals()
+===================
+RETURN TYPE : boolean
+DESCRIPTION : Compares two strings. Returns true if the strings are equal, and false if not
+              //equals() - can take any Object as a parameter.
+			  //compareTo() - can only take String.
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str1 = "Welcome";
+		String str2 = "Message";
+		System.out.println("Check Whether given 2 Strings Are Equal : "+str1.equals(str2));
+	}
+}
+OUTPUT>>
+--------
+
+METHOD-10 : equalsIgnoreCase()
+==============================
+RETURN TYPE : boolean
+DESCRIPTION : Compares two strings, ignoring case considerations
+              //equalsIgnoreCase() -  can return immediately.(Lot Faster)
+			  //compareToIgnoreCase() -  Has to iterate to the end of the string to see the difference.(Very Slow)
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str1 = "Welcome";
+		String str2 = "Message";
+		System.out.println("Check Whether given 2 Strings Are Equal : "+str1.equalsIgnoreCase(str2));
+	}
+}
+OUTPUT>>
+--------
+Check Whether given 2 Strings Are Equal : false
+
+METHOD-11 : toLowerCase()
+=========================
+RETURN TYPE : String
+DESCRIPTION : Converts a string to lower case letters 	
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Welcome";
+		System.out.println("Convert given String To Lower-Case : "+str.toLowerCase());
+	}
+}
+OUTPUT>>
+--------
+Convert given String To Lower-Case : welcome
+
+METHOD-12 : toUpperCase()
+=========================
+RETURN TYPE : String
+DESCRIPTION : Converts a string to Upper case letters
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Welcome";
+		System.out.println("Convert given String To Upper-Case : "+str.toUpperCase());
+	}
+}
+OUTPUT>>
+--------
+Convert given String To Upper-Case : WELCOME
+
+METHOD-13 : format()
+====================
+RETURN TYPE : String
+DESCRIPTION : Returns a formatted string using the specified locale, format string, and arguments
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Welcome";
+		String changed1 = str.format("%s",str);
+		String changed2 = str.format("%d",10);     //Converts String Welcome To Integer
+		String changed3 = str.format("%f",32.33);  //Converts String Welcome To Float
+		String changed4 = str.format("%c",'V');    //Converts String Welcome To Character
+		String changed5 = str.format("|%10d|",10); //Gives Spaces for integers
+		String changed6 = str.format("|%-10d|",20);//Gives Spaces for integers
+		System.out.println(changed1);
+		System.out.println(changed2);
+		System.out.println(changed3);
+		System.out.println(changed4);
+		System.out.println(changed5);
+		System.out.println(changed6);
+		
+	}
+}
+OUTPUT>>
+--------
+Welcome
+10
+32.330000
+V
+|        10|
+|20        |
+
+METHOD-14 : getChars()
+======================
+//getChars(int srcBeginIndex, int srcEndIndex, char[] destination, int dstBeginIndex)
+RETURN TYPE : void
+DESCRIPTION : Copies characters from a string to an array of chars.
+              The method throws StringIndexOutOfBoundsException when any one or more than one of the following conditions holds true.
+			  =>If srcBeginIndex is less than zero.
+              =>If srcBeginIndex is greater than srcEndIndex.
+              =>If srcEndIndex is greater than the size of the string that invokes the method
+              =>If dstEndIndex is is less than zero.
+              =>If dstEndIndex + (srcEndIndex - srcBeginIndex) is greater than the size of the destination array.
+
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Welcome To Java";
+		char ch[] = new char[20];
+		try
+		{
+			str.getChars(3, 7, ch, 0);
+			System.out.println(ch);
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+	}
+}
+OUTPUT>>
+--------
+come
+
+METHOD-15 : indexOf()
+=====================
+RETURN TYPE : int
+DESCRIPTION : Returns the position of the first found occurrence of specified characters in a string 
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Welcome To Java";
+		System.out.println("The Index Is : "+str.indexOf("come"));
+	}
+}
+OUTPUT>>
+--------
+The Index Is : 3
+
+METHOD-16 : isEmpty()
+=====================
+RETURN TYPE : boolean
+DESCRIPTION : Checks whether a string is empty or not  
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str1 = "Welcome";
+		String str2 = "";
+		System.out.println("Is Empty String-1 : "+str1.isEmpty());
+		System.out.println("Is Empty String-2 : "+str2.isEmpty());
+	}
+}
+OUTPUT>>
+--------
+Is Empty String-1 : false
+Is Empty String-2 : true
+
+METHOD-17 : lastIndexOf()
+=========================
+RETURN TYPE : int
+DESCRIPTION : Returns the position of the last found occurrence of specified characters in a string  
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str1 = "Welcome To Java";
+		System.out.println("The Last Index Is : "+str1.lastIndexOf("Java"));
+	}
+}
+OUTPUT>>
+--------
+The Last Index Is : 11
+
+METHOD-18 : length()
+====================
+RETURN TYPE : int
+DESCRIPTION : Returns the length of a specified string  
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str1 = "Welcome To Java";
+		System.out.println("The Length Is : "+str1.length());
+	}
+}
+OUTPUT>>
+--------
+The Length Is : 15
+
+METHOD-19 : replace()
+=====================
+RETURN TYPE : String
+DESCRIPTION : Searches a string for a specified value, and returns a new string where the specified values are replaced.  
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Welcome";
+		System.out.println(str.replace('W','M'));
+		System.out.println(str.replace("Wel","May"));
+	}
+}
+OUTPUT>>
+--------
+Melcome
+Maycome
+
+METHOD-20 : valueOf()
+=====================
+RETURN TYPE : String
+DESCRIPTION : Returns the string representation of the specified value   
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		int value = 10;
+		String str = String.valueOf(value);
+		System.out.println(str);
+		System.out.println(str+"hello");
+		System.out.println(str+20);
+		System.out.println(str+'V');
+	}
+}
+OUTPUT>>
+--------
+10
+10hello
+1020
+10V
+
+METHOD-21 : trim()
+==================
+RETURN TYPE : String
+DESCRIPTION : Removes whitespace from both ends of a string   
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "   Welcome Message Good     ";
+		System.out.println("The Trimmed correct String Is : "+str.trim());
+	}
+}
+OUTPUT>>
+--------
+The Trimmed correct String Is : Welcome Message Good
+
+METHOD-22 : toCharArray() 
+=========================
+RETURN TYPE : Character[]
+DESCRIPTION : Converts this string to a new character array   
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Welcome Message";
+		char ch[] = str.toCharArray();
+		for(int i=0;i<ch.length;i++)
+		{
+			System.out.println("Index : "+i+" => "+"'"+ch[i]+"'");
+		}
+	}
+}
+OUTPUT>>
+--------
+Index : 0 => 'W'
+Index : 1 => 'e'
+Index : 2 => 'l'
+Index : 3 => 'c'
+Index : 4 => 'o'
+Index : 5 => 'm'
+Index : 6 => 'e'
+Index : 7 => ' '
+Index : 8 => 'M'
+Index : 9 => 'e'
+Index : 10 => 's'
+Index : 11 => 's'
+Index : 12 => 'a'
+Index : 13 => 'g'
+Index : 14 => 'e'
+
+
+METHOD-23 : substring()
+=========================
+RETURN TYPE : String
+DESCRIPTION : Returns a new string which is the substring of a specified string 
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "WelcomeMessage";
+		System.out.println("The Substring Is : "+str.substring(3));
+		System.out.println("The Substring Is : "+str.substring(3,7));
+		int start = str.indexOf('l');
+		int end = str.indexOf('M');
+		System.out.println("The Substring Is : "+str.substring(start+1,end));
+	}
+}
+OUTPUT>>
+--------
+The Substring Is : comeMessage
+The Substring Is : come
+The Substring Is : come
+
+METHOD-24 : subSequence()
+=========================
+RETURN TYPE : CharSequence
+DESCRIPTION : Returns a new character sequence that is a subsequence of this sequence 
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "WelcomeMessage";
+		System.out.println("The Sub-sequence Is : "+str.subSequence(3, 7));
+	}
+}
+OUTPUT>>
+--------
+The Sub-sequence Is : come
+
+METHOD-25 : startsWith()  
+========================
+RETURN TYPE : boolean
+DESCRIPTION : Checks whether a string starts with specified characters 
+CODING :-
+---------
+public class Sample
+{
+	public static void main(String[] args)
+	{
+		String str = "Good";
+		System.out.println("Is String Starting With..: "+str.startsWith("G"));
+		System.out.println("Is String Starting With..: "+str.startsWith("g"));
+		System.out.println("Is String Starting With..: "+str.startsWith("Good"));
+	}
+}
+OUTPUT>>
+--------
+Is String Starting With..: true
+Is String Starting With..: false
+Is String Starting With..: true
+
+

@@ -1,0 +1,617 @@
+                                                           DECISION MAKING STATEMENTS & LOOPS
+														   ==================================
+                            "Execution of a statement or set of statement repeatedly is called as looping". 
+                (The loop may be executed a specified number of times and this depends on satisfying a test condition)
+				
+DECISION MAKING STATEMENTS:
+==========================
+-Decision making structures have one or more conditions to be evaluated or tested by the program. 
+-Along with a statement or statements that are to be executed if the condition is determined to be true and optionally other statements to be executed 
+ if the condition is determined to be false.
+
+TWO TYPES:
+==========
+       1)ENTRY CONTROLLED LOOP : When the control statement is placed before the body of the loop then such loops are called as entry controlled loops.
+	   2)EXIT CONTROLLED LOOP  : When the control statement is placed after the body of the loop then such loops are called as exit controlled loop.
+	   
+DIFFERENT TYPES OF LOOPS & STATEMENTS USED:
+===========================================
+=>IF-else/Else-if LOOP
+=>WHILE LOOP
+=>DO WHILE LOOP
+=>FOR LOOP
+=>SWITH CASE
+
+                                                          IF-ELSE LOOP
+														  ============
+                                                Syntax:-
+												--------
+												
+												if (test expression) 
+												{
+                                                    // run code if test expression is true
+                                                }
+                                                else 
+                                                {
+                                                // run code if test expression is false
+                                                }
+												
+												Example:-
+												---------
+												
+												          AGE FOR VOTING BY A PERSON
+														  ==========================
+												
+												public class VotingAge
+												{
+												public static void main(string[] args)
+												{
+												int age=25;
+												
+												if (age>=18) 
+												{
+                                                  System.out.println("ELIGIBLE");
+                                                }
+                                                else 
+                                                {
+                                                  System.out.println("NOT ELIGIBLE");
+                                                }
+												}
+										        }
+												
+												OUTPUT >> ELIGIBLE
+												
+												           IF-ELSEIF-ELSE LOOP   //in case of multiple true/false conditions possibility
+														   ===================
+												syntax:-
+												-------
+												if (condition1) 
+												{
+												 //codes
+                                                }
+                                                
+												else if(condition2) 
+												{
+                                                 //codes
+                                                }
+                                                
+												else if (condition3) 
+												{
+                                                 //codes
+                                                }
+												
+												else 
+												{
+                                                //codes
+												}
+												
+												Example:-
+												--------                -5 -4 -3 -2 -1 0 1 2 3 4 5
+												class NumberCheck
+												{
+												public static void main(string[] args)
+												{
+												int num=5;
+												if(num>0)
+												{
+												System.out.println("Number is +ve");
+												}
+												elseif(num<0)
+												{
+												System.out.println("Number is -ve");
+									            }
+												else
+												{
+												System.out.println("Number is Integer");
+												}
+												}
+												}
+												
+												OUTPUT >> Number is +ve
+										        
+												NESTED IF(IF-ELSE)--ELSE(IF-ELSE)
+												=================================
+												Syntax:-
+												-------
+												if (condition1) 
+												{
+												   if(Condition)
+												     //code
+												   else
+												     //code
+                                                }
+												
+                                                else 
+												{
+                                                   if(Condition)
+												     //code
+											       else
+												     //code
+								
+												}
+												
+												Example:-
+												---------
+                                                public class LargestAmongThreeNumbers
+                                                {
+												public static void main(String[] args)
+												{
+												int A=10,B=65,C=40;
+												      
+													   //Nested IF(if-else)
+												
+                                                if(A>=B) 
+                                                {
+                                                    if(A>=C)
+                                                        System.out.println(A + " is the largest number.");
+                                                    else
+                                                        System.out.println(C + " is the largest number.");
+                                                } 
+               
+                                                       //Nested Else(if-else)
+                               
+							                    else 
+                                                {
+                                                    if(B>=C)
+                                                        System.out.println(B + " is the largest number.");
+                                                    else
+                                                        System.out.println(C + " is the largest number.");
+                                                }
+												}
+												}
+												
+												OUTPUT >> 65 is the largest number.|
+										__________________________________________________________________________
+										__________________________________________________________________________
+												
+												                      
+																	 WHILE LOOP
+																	 ==========
+										
+										Syntax:-
+									    -------
+										while(Condition)
+										{
+										   //Repeats until the condition is True.  //single condition
+										}
+										
+										
+										Example:-
+										---------
+										 public class WhileExample 
+										 {
+                                         public static void main(String[] args) 
+										 {
+                                         int i=1;
+                                         while(i<=10)                              //In the case of (i>=10),the loop runs indefinitely/infinite times.
+										 {
+										 System.out.println("PRINTING NUMBERS");
+                                         System.out.println(i);
+                                         i++;
+                                         }
+                                         }
+										 
+										 OUTPUT >>
+										 ---------
+										 
+										 PRINTING NUMBERS
+										 1
+										 PRINTING NUMBERS
+                                         2
+										 PRINTING NUMBERS
+	                                     3
+                                         PRINTING NUMBERS										 
+	                                     4
+                                         PRINTING NUMBERS										 
+	                                     5
+                                         PRINTING NUMBERS										 
+                                         6
+										 PRINTING NUMBERS
+                                         7	             
+                                         PRINTING NUMBERS										 
+                                         8
+                                         PRINTING NUMBERS										 
+                                         9
+										 PRINTING NUMBERS
+                                         10											
+										 
+										 
+										 
+										                        NESTED-WHILE LOOP
+															    =================
+										Syntax:-
+										-------
+										while(condition 1)
+                                        {
+                                        statement(s)
+										
+                                              while(Condition 2)
+                                              {
+                                               statement(s)
+                                              }
+                                        }
+										
+										Example:-
+										---------
+										class NestedWhile
+										{
+                                        public static void main(String args[])
+										{
+                                        int i=1,j=1;
+                                        while(i<=10)
+                                        {
+                                            while(j<=10)
+                                            {
+                                            System.out.print(j);
+                                            j++;        
+                                            }
+										System.out.println();
+										j=1;
+                                        i++;
+										}
+										}
+										}
+										
+										OUTPUT >>
+										---------
+										12345678910
+										12345678910
+										12345678910
+										12345678910
+										12345678910
+										12345678910
+                                        12345678910
+										12345678910
+										12345678910
+										12345678910
+										
+										__________________________________________________________________________________
+										__________________________________________________________________________________
+										
+										
+							                                             DO-WHILE LOOP
+													                     =============
+								       
+									   Syntax:-
+										-------
+										do
+										{
+										   //Body
+										   //Code to be executed
+										   //update statement
+										}
+										while(Condition);
+										
+										Example:-
+										--------
+										public class Example
+										{
+										public static void main(string[] args)
+										{
+										int i=1;
+										do
+										{
+										System.out.println(i);
+										i++;
+										}
+										while(i<=10);
+										}
+										}
+										
+										OUTPUT >>
+										---------
+										1
+										2
+										3
+										4
+										5
+										6
+										7
+										8
+										9
+										10
+										  
+										  
+										                            NESTED DO-WHILE LOOP
+													                ====================
+										
+										Syntax:-
+										--------
+										Statements
+                                        do
+										{
+                                           Statements
+                                        do
+										{
+                                           Statements
+                                        }while(condition);
+                                        }while(condition);
+										
+										Example:-
+										---------
+										public class Example
+										{
+										public static void main(string[] args)
+										{
+										int i=1;
+										int j=11;
+										
+										do
+										{
+										Sytem.out.println(i);
+										i++;
+										}while(i<=10);
+										
+										System.out.println("\n\n");
+										
+										do 
+										{
+										Sytem.out.println(j);
+										j++;
+										}while(j<=20);
+										
+										}
+										}
+										
+										OUTPUT >>
+										---------
+										1
+										2
+										3
+										4
+										5
+										6
+										7
+										8
+										9
+										10
+										
+										11
+										12
+										13
+										14
+										15
+										16
+										17
+										18
+										19
+										20
+										
+									_______________________________________________________________________________________
+									_______________________________________________________________________________________
+									
+									                                     FOR LOOP
+																		 ========
+									
+									Syntax:-
+									--------
+									for(Initialization;Condition;Increment/Decrement)
+									{
+									    //Body
+										//Using of initialized Variable
+										//Usage of condition-loop runs until condition satisfies
+										//Updation
+									}
+									
+									Example:-
+									---------
+									public class Example
+									{
+									public static void main(string[] args)
+									{
+									for(int i=1;i<=5;i++)
+									{
+									  int Sum=5;
+									  int Add=Sum+i;
+									  System.out.println("The Addition Is: "+Add);
+									}
+									}
+									}
+									
+									OUTPUT >>
+									---------
+									The Addition Is: 6
+									The Addition Is: 7
+									The Addition Is: 8
+									The Addition Is: 9
+									The Addition Is: 10
+									
+									
+									                                NESTED FOR-LOOP
+																	===============
+									public class Sample 
+                                    { 
+                                    public static void main(String[] args) 
+                                    {  
+                                    for(int i=1;i<=5;i++)
+                                    {  
+                                    for(int j=1;j<=i;j++)
+                                    {  
+                                     System.out.print("@#");  
+                                    }  
+                                     System.out.println();
+                                    }  
+                                    }  
+                                    }
+									
+									OUTPUT>>
+									--------
+									@#
+                                    @# @#
+                                    @# @# @#
+                                    @# @# @# @#
+                                    @# @# @# @# @#
+
+                                    __________________________________________________________________________
+									__________________________________________________________________________
+									
+									                        SWITCH-CASE STATEMENTS
+															====================== 
+															
+								    -Selection of particular from list of statements based on a condition
+									-Keywords used here are:
+									   ->switch
+									   ->case
+									   ->break
+									   ->default
+									
+									LIMITATIONS
+									-----------
+									->Logical operators cannot be used with switch statement.
+									->Only int,byte,long,short,double and char data types is used 
+									->float is not allowed 
+									
+									Syntax:-
+									-------
+									switch(expression)
+									{      
+                                    case value1:      
+                                             //code to be executed;      
+                                                             break;    
+                                    case value2:      
+                                             //code to be executed;      
+                                                             break;      
+                                    ......      
+          
+                                    default:       
+                                            //code to be executed if all cases are not matched;      
+                                    
+ 									}  
+									
+									Example:-
+									--------
+									public class Sample 
+                                    { 
+                                    public static void main(String[] args) 
+                                    {  
+                                    int num=5;
+                                    switch(num)
+                                    {
+                                    case 0:
+    	                                  System.out.println("SUNDAY");
+    	                                  break;
+                                    case 1:
+    	                                  System.out.println("MONDAY");
+    	                                  break;
+                                    case 2:
+    	                                  System.out.println("TUESDAY");
+    	                                  break;
+                                    case 3:
+    	                                  System.out.println("WEDNESDAY");
+    	                                  break;
+                                    case 4:
+    	                                  System.out.println("THURSDAY");
+    	                                  break;
+                                    case 5:
+    	                                  System.out.println("FRIDAY");
+    	                                  break;
+                                   default:
+    	                                  System.out.println("SATURADY");
+                                          break;
+                                    }
+    
+                                    }  
+   
+                                    }
+									
+									OUTPUT>>
+									---------
+									FRIDAY
+									
+									Example:-
+									---------
+									import java.util.Scanner;
+                                    public class Sample 
+                                    { 
+	                                public static void main(String[] args)
+	                                {
+	                                int option;
+	                                System.out.println("Enter any number from 1 To 7 : ");
+                                	Scanner sc = new Scanner(System.in);
+	                                option = sc.nextInt();
+	
+	                                switch(option)
+	                                {
+	                                case  1:
+	                                       System.out.println("Today is Monday");
+	                                       break;
+	                                case  2:
+	                                       System.out.println("Today is Tuesday");
+	                                       break;
+	                                case  3:
+	                                       System.out.println("Today is Wednesday");
+	                                       break;
+	                                case  4:
+	                                       System.out.println("Today is Thursday");
+	                                       break;
+	                                case  5:
+                                       	   System.out.println("Today is Friday");
+	                                       break;
+	                                case  6:
+	                                       System.out.println("Today is Saturday");
+	                                       break;
+	                                case  7:
+	                                       System.out.println("Today is Sunday");
+	                                       break;
+	                                default:
+	                                       System.out.println("OOPS!sry!...Invalid User input..Error!!");
+	                                       break;
+	                                }
+	                                }
+									}
+									OUTPUT>>
+									--------
+									Enter any number from 1 To 7 : 
+                                    10
+                                    OOPS!sry!...Invalid User input..Error!!
+                                    OOPS!sry!...Invalid User input..Error!!
+									
+									
+									
+									
+							
+									
+									  
+									
+									
+								
+										
+								
+										
+									
+										
+										
+										
+										
+										
+										
+
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										
+					
+										
+					
+									
+										
+										
+								
+                                        
+                                        
+ 
+									
+														  

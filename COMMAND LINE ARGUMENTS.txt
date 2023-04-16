@@ -1,0 +1,62 @@
+//COMMAND LINE ARGUMENTS
+
+
+                                                  COMMAND LINE ARGUMENTS
+												  ======================
+- Command-line arguments are simple parameters that are given on the system's command line
+- The values of these arguments are passed on to your program during program execution i.e.., on run-time..
+
+LOCATION OF COMMAND LINE ARGUMENTS PASSING:-
+--------------------------------------------
+- In Main function,
+  public static void main(String[] args)
+  {
+     //DEFAULT DATA TYPE = present in the main function is 'String' .
+	 //DEFAULT VARIABLE NAME = present in the main function is 'args'.
+
+  }
+- In Above main function,the value to the 'args' variable is assigned/passed/given during run-time through console Window
+- The Variable name 'args' can be altered to any name.
+- But data-type can also be changed from string to any data-type either by using .parseInt() or by Type-casting.
+
+Example:-
+---------
+//PRINTING NAME USING COMMAND LINE ARGUMENTS
+public class Sample 
+{
+	public static void main(String[] Name)
+	{
+		System.out.println("Person Name Is : "+Name[0]);
+	}
+
+}
+OUTPUT>>
+--------
+Person Name Is : Rocky
+
+Example:-
+---------
+//PRINTING SUM OF NUMBERS USING COMMAND LINE ARGUMENTS
+public class Sample 
+{
+	public static void main(String[] args) 
+	{
+		int sum = 0;
+		System.out.println("Calculates Sum for below Integers");
+		for(int i=0;i<args.length;i++)
+		{
+			System.out.println(args[i]);
+			sum = sum + Integer.parseInt(args[i]);
+		}
+		System.out.println("Sum :" + sum);
+		}
+}
+OUTPUT>>
+--------
+Calculates Sum for below Integers
+10
+20
+30
+40
+50
+Sum :150

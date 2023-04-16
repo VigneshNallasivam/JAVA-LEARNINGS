@@ -1,0 +1,159 @@
+//DATA-TYPES & VARIABLES
+
+
+                                                DATA-TYPES
+                                                ==========
+-Type of data to be stored in a Variable is called Data-type.
+-Data types specify the different sizes and values that can be stored in the variable.
+
+TWO TYPES OF Data-type:
+=======================
+=>Primitive/Intrinsic/Built-In Data-types (Not defined by a User/ No Need for allocation of Memory)
+-----------------------------------------
+  -A primitive type is predefined by the language and is named by a reserved keyword. 
+  -Primitive values do not share state with other primitive values.
+  
+=>Non-Primitive/Derived/Reference Data-types (User Defined /Needed Memory Allocation)
+--------------------------------------------
+  - Non-primitive data types or reference data types refer to instances or objects. 
+  - They cannot store the value of a variable directly in memory.  
+  - They store a memory address of the variable. Unlike primitive data types, which are defined by Java.
+  
+ClASSIFICATION:
+==============
+                                               DATA-TYPES 
+                                               -----------											   
+											    /      \
+											   /        \
+											  /          \
+											 /            \
+									    Primitive       Non-Primitive
+										Data-type         Data-type
+										---------       -------------
+					INTEGER TYPE  =>short  (2 byte)        =>String
+					INTEGER TYPE  =>int    (4 byte)        =>Array
+					INTEGER TYPE  =>byte   (8 bits)        =>Classes
+					INTEGER TYPE  =>long   (8 byte)        =>Interfaces
+					FLOATING TYPE =>float  (4 byte)        =>Objects
+					FLOATING TYPE =>double (8 byte)
+                 NON-NUMERIC TYPE =>boolean(1 bit)
+			     NON-NUMERIC TYPE =>char   (2 byte)
+				 
+
+RANGES OF DATA-TYPES:
+=====================
+
+                      INTEGER TYPE RANGES
+					  -------------------
+byte     => Stores whole numbers from -128 to 127
+short    => Stores whole numbers from -32,768 to 32,767
+int  	 => Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long  	 => Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+
+                       FLOATING TYPE RANGES
+					   --------------------
+float 	 => Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+double 	 => Stores fractional numbers. Sufficient for storing 15 decimal digits
+
+                       NON-NUMERIC TYPE RANGES
+					   -----------------------
+boolean  => Stores true or false values
+char 	 => Stores a single character/letter or ASCII values
+
+SYNTAX FOR USING DATA TYPES:-
+============================
+- All data-type name starts with small letters only
+  syntax : data_type  Variable_name; 
+  Example: int num1;
+  
+Example:-
+---------
+//PRINTING ALL THE DEFAULT VALUES OF PRIMITIVE DATA-TYPES
+
+public class Sample
+{
+public static void main(String[] args)
+{
+System.out.println("*****Integer type Default Values*****");
+byte a=0;
+System.out.println("Default Value of byte-a: " +a);
+short b=0;
+System.out.println("Default Value of short-b: " +b);
+int c=0;
+System.out.println("Default Value of int-c: " +c);
+long d=0;
+System.out.println("Default Value of long-d: " +d);
+
+System.out.println("*****Floating type Default Values*****");
+float e=0;
+System.out.println("Default Value of float-e: " +e);
+double f=0;
+System.out.println("Default Value of double-f: " +f);
+
+System.out.println("*****Non-numeric type Default Values*****");
+char g=0;
+System.out.println("Default Value of char-g: " +g);
+boolean h = false;
+System.out.println("Default Value of boolean-h: " +h);
+}
+}
+
+OUTPUT>>
+--------
+*****Integer type Default Values*****
+Default Value of byte-a: 0
+Default Value of short-b: 0
+Default Value of int-c: 0
+Default Value of long-d: 0
+
+*****Floating type Default Values*****
+Default Value of float-e: 0.0
+Default Value of double-f: 0.0
+
+*****Non-numeric type Default Values*****
+Default Value of char-g: 
+Default Value of boolean-h: false
+__________________________________________________________________________________________________________________________________
+
+                                                       VARIABLES
+													   =========
+- Variables is a name given to the data-type.
+- Variables are containers for storing data values.
+- The Name given to the Memory Location.
+- A variable is the name of a reserved area allocated in memory. 
+
+TYPES OF VARIABLES:-
+-------------------
+=>Instance Variable:
+                 -A variable declared inside the class but outside the body of the method, is called an instance variable.
+                 -It is not declared as static. 
+				 
+=>Local Variable:    
+                 -A variable declared inside the body of the method is called local variable.
+				 -You can use this variable only within that method & the other methods in the class aren't even aware that the variable exists.
+                 -It is not declared as static.
+				 
+=>Static Variable:   
+                 -A variable that is declared as static is called a static variable.
+				 -It cannot be local, but used/shared among all instance of class.
+                 -Memory allocation for static variables happens only once when the class is loaded in the memory.
+
+Example:-
+---------
+public class Sample
+{
+static int num1=10;                              //static variable
+
+void show()
+{ 
+int num2=20;                                     //local variable
+}
+
+public static void main(String args[])  
+{  
+  int data=50;                                   //instance variable    
+} 
+} 
+				 
+
+  

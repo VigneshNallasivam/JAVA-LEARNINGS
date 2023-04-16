@@ -1,0 +1,192 @@
+//ARRAY
+
+                                                                 ARRAY
+																 =====
+-Array is a collection of elements arranged in rows & columns of homogeneous(Same) data type
+-Array comes under static data structure of linear data structure.
+
+
+ADVANTAGES:
+----------
+->CODE OPTIMIZATION : It makes the code optimized, we can retrieve or sort the data efficiently.
+->RANDOM ACCESS : We can get any data located at an index position.
+
+
+DISADVANTAGES:
+--------------
+->SIZE LIMIT : In Array, Size is fixed.It cannot be modified.
+
+
+TO OVERCOME DISADVANTAGES:
+--------------------------
+Collections Framework is used to overcome fixed size disadvantage, In Collections the size grows automatically
+
+STRUCTURE OF AN ARRAY:
+----------------------
+     
+  1st                                             Last
+ Index                                           Index
+   _0___1___2___3___4_____5___6____7___8____9____10__
+   ___|___|___|___|____|____|___|____|____|____|_____ <==Elements Location
+  
+                  Array Lenth = 10+1 = 11
+ |<--------------------------------------------------->|
+ 
+What is Length of an Array?
+The length of an array is the total number of the elements which is contained by all the dimensions of that array.
+Formula : Array Length = Array's last index + 1
+Syntax  : array_name.length;
+Example : arr.length;
+
+ 
+TYPES OF ARRAY:
+---------------
+=>Single Dimensional ARRAY
+=>Multi Dimensional ARRAY
+             
+IMPLEMENTATION OF ARRAY:
+========================
+Implementation of Array can be done in 3 Ways
+
+#1. DECLARATION OF AN ARRAY:-
+-----------------------------
+syntax : data_type  array_name[];
+Example: int arr[]; 
+						
+#2. DECLARATION, INSTANTANIATION & INITIALIZATION OF AN ARRAY:-
+--------------------------------------------------------------
+syntax : data_type array_name[] = new data_type[size];
+Example: int arr[] = new int[100]; 
+          
+#3. DECLARATION, INITIALIZATION & ASSIGNING OF AN ARRAY:-
+--------------------------------------------------------
+syntax : data_type array_name[] = {value1,value2,value3,.....};
+Example: int arr[] = {10,20,30,40,50};
+                  (OR)
+		 int arr[] = new int [] {10,20,30,40,50};
+           
+
+Example:-
+=========
+//TO PRINT AN ARRAY LENGTH
+
+public class Sample
+{
+public static void main(String[] args)
+{
+	
+int arr0[]={};
+int arr1[] = new int[120];
+int arr2[] = {10,30,55,67,567};
+
+int Length0 = arr0.length;
+int Length1 = arr1.length;
+int Length2 = arr2.length;
+
+System.out.println("The Length of An Array-0 Is : " +Length0);
+System.out.println("The Length of An Array-1 Is : " +Length1);
+System.out.println("The Length of An Array-2 Is : " +Length2);
+}
+}
+OUTPUT>>
+--------
+The Length of An Array-0 Is : 0
+The Length of An Array-1 Is : 120
+The Length of An Array-2 Is : 5
+
+
+
+Example:-
+========
+//TO PRINT AN ARRAY
+
+public class Sample 
+{
+    
+	public static void main(String[] args) 
+	{
+		int arr[] = {10,20,30,40,50};
+	    int i=0;
+		while(i < arr.length)
+		{
+		    System.out.println("PRINTING OF ARRAY........");
+			System.out.println("Index : " +i);
+			System.out.println("Value : " +arr[i]);
+			System.out.println();
+			i++;
+		}
+
+	}
+
+}
+OUTPUT>>
+--------
+PRINTING OF ARRAY........
+Index : 0
+Value : 10
+
+PRINTING OF ARRAY........
+Index : 1
+Value : 20
+
+PRINTING OF ARRAY........
+Index : 2
+Value : 30
+
+PRINTING OF ARRAY........
+Index : 3
+Value : 40
+
+PRINTING OF ARRAY........
+Index : 4
+Value : 50
+
+
+Example:-
+========
+//GETTING ARRAY ELEMENTS FROM THE USER USING SCANNER CLASS
+
+    import java.util.Scanner;  
+    public class Sample   
+    {  
+    public static void main(String[] args)   
+    { 
+    int N;
+    int i;	
+    Scanner sc=new Scanner(System.in);  
+    System.out.print("Enter the number of elements you want to store: ");   
+    N = sc.nextInt();  
+	
+    int arr[] = new int[5];  
+    System.out.println("Enter the elements of the array: ");  
+    for(i=0; i<N; i++)  
+    {  
+    arr[i]=sc.nextInt();  
+    }  
+    
+	System.out.println("Array elements are: ");  
+    for (i=0; i<N; i++)   
+    {  
+    System.out.println(arr[i]);  
+    }  
+    }  
+    }  
+OUTPUT>>
+--------
+Enter the number of elements you want to store: 5
+Enter the elements of the array: 
+10
+20
+30
+25
+40
+Array elements are: 
+10
+20
+30
+25
+40
+
+
+
+						

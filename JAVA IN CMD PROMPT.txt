@@ -1,0 +1,19 @@
+//HOW TO RUN JAVA WITHOUT IDE/RUN IN COMMAND PROMPT
+
+
+
+                                   STEPS TO RUN JAVA IN COMMAND-PROMPT
+								   ===================================
+STEP : 1 ==> Open 'Notepad' /Type any Java Program without any errors /Save the file in desktop with '.java' extension.
+             (NOTE : Classname & Filename should be Same)
+			 
+STEP : 2 ==> Open Command Prompt by pressing 'Windows+R' & Type 'cmd' then press enter. 
+             (NOTE : Also you can open Command prompt by just searching in search bar near Windows-logo)
+			 
+STEP : 3 ==> Compile the Saved file using 'javac file_name.java' command.
+             (NOTE : In Desktop you can See a Java-File will be Created)
+			 
+STEP : 4 ==> Run the compiled file using 'java file_name' command.
+             (NOTE : In Desktop you can see a Java-class-File Will be Created)
+			 
+STEP : 5 ==> Finally you can see the Desired o/p in cmd-prompt window.   

@@ -1,0 +1,477 @@
+//SAMPLE CODINGS-1
+
+
+
+                                                SAMPLE CODINGS-1
+												================
+Example1:-
+---------
+//SWAPPING OF TWO NUMBERS USING THIRD VARIABLE
+public class Sample
+{
+public static void main(String[] args)
+	{
+		int num1=10;
+		int num2=20;
+		int temp;
+		System.out.println("****Before Swapping****");
+		System.out.println("Num1= :" +num1);
+		System.out.println("Num2= :" +num2);
+		temp=num1;//10
+		num1=num2;//10=20
+		num2=temp;//20
+		System.out.println("****After Swapping****");
+		System.out.println("Num1= :" +num1);
+		System.out.println("Num2= :" +num2);
+	}
+}
+OUTPUT>>
+--------
+****Before Swapping****
+Num1= :10
+Num2= :20
+****After Swapping****
+Num1= :20
+Num2= :10
+
+
+
+Example2:-
+---------
+//SWAPPING OF TWO NUMBERS WITHOUT USING THIRD VARIABLE
+public class Sample
+{
+public static void main(String[] args)
+	{
+		int num1=10;
+		int num2=20;
+		System.out.println("****Before Swapping****");
+		System.out.println("Num1= :" +num1);
+		System.out.println("Num2= :" +num2);
+		num1 = num1+num2;
+		num2 = num1-num2;
+		num1 = num1-num2;
+		System.out.println("****After Swapping****");
+		System.out.println("Num1= :" +num1);
+		System.out.println("Num2= :" +num2);
+	}
+}
+OUTPUT>>
+--------
+****Before Swapping****
+Num1= :10
+Num2= :20
+****After Swapping****
+Num1= :20
+Num2= :10
+
+
+
+
+Example3:-
+---------
+//CHECK GIVEN NUMBER IS PRIME NUMBER OR NOT
+import java.lang.*;
+import java.util.*;
+public class Sample
+{
+	static boolean isPrime()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter Number : " );
+		int num = scan.nextInt();
+		
+		if(num<=1)                                    //Because '0' & '1' is not a prime number 
+			return false;
+		else if(num==2)                               //Because '2' is the only Even prime number
+			return true;
+		else if(num%2==0)                             //Because numbers perfectly divisible by 2(other Even numbers) is not considered,so false 
+			return false;
+		for(int i=3;i<=Math.sqrt(num);i=i+2)          //For Getting all the Odd Numbers Other than '1'
+		{
+			if(num%i==0)                              //For filtering out the possibility of odd to odd division
+				return false;
+		}
+		return true;
+	}
+	
+	public static void main(String[] args)
+	{
+		if(isPrime())
+			System.out.println("true! Prime Number");
+		else 
+			System.out.println("false! Not a Prime Number");
+		
+		
+	}
+}
+OUTPUT>>
+--------
+Enter Number : 
+3
+true! Prime Number
+
+                                                         ((OR))
+														 
+Example:-
+---------
+//TO PRINT PRIME NUMBERS FROM 1 TO N
+import java.util.Scanner;
+public class Sample 
+{
+	public static void main(String[] args)
+	{
+		Scanner scanner = new Scanner(System.in);
+		int i = 0;
+		int num = 0;
+		String primeNumbers ="";
+		System.out.println("Enter N : ");
+		int N = scanner.nextInt();
+		for(i=1;i<=N;i++)
+		{
+			int count = 0;
+			for(num=i;num>=1;num--)
+			{
+				if(i%num==0)
+				{
+					count++;
+				}
+			}
+			if(count==2)
+			{
+				primeNumbers = primeNumbers+i+" ";
+			}
+		}
+		System.out.println("Prime Numbers from 1 to "+N+" are : ");
+		System.out.println(primeNumbers);
+	}
+}
+
+OUTPUT>>
+--------
+Enter N : 
+100
+Prime Numbers from 1 to 100 are : 
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97 
+
+
+
+
+
+Example4:-
+----------
+//CHECKING DUPLICATE CHARACTERS IN A STRING
+public class Sample
+{
+  public static void main(String argu[]) 
+  {
+	String str = "Beauty Beach";  
+    char[] carray = str.toCharArray();
+	System.out.println("The string is: " + str);
+	System.out.print("Duplicate Characters in above string are: ");
+	for (int i = 0; i < str.length(); i++) 
+	 {
+	 for (int j = i + 1; j < str.length(); j++) 
+	  {
+	  if (carray[i] == carray[j]) 
+	   {
+		 System.out.print(carray[j] + " ");
+	   }
+	  }
+	 }
+  }
+}
+OUTPUT>>
+--------
+The string is: Beauty Beach
+Duplicate Characters in above string are: B e a 
+
+
+
+Example5:-
+----------
+//DUPLICATE ELEMENTS IN AN ARRAY
+public class Sample
+{
+  public static void main(String argu[]) 
+  {
+  int arr[] = {1,2,3,4,5,2,3,4,6};
+  System.out.println("Duplicate Elements In An Array Are : ");
+  for(int i=0;i<arr.length;i++)//1
+  {
+	for(int j=i+1;j<arr.length;j++)//2
+	{
+		if(arr[i]==arr[j])
+		System.out.println(arr[j]);
+		
+	}
+   }
+  }
+}
+OUTPUT>>
+--------
+Duplicate Elements In An Array Are : 
+2
+3
+4
+
+
+
+
+Example6:-
+----------
+//GIVEN TWO STRINGS ARE ANAGRAM OR Not
+import java.util.Scanner;
+import java.util.Arrays;
+public class Anagram 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter String-1");
+	    String str1 = scan.next();
+	    System.out.println("Enter String-2");
+	    String str2 = scan.next();
+	    
+		str1 = str1.toLowerCase();
+		str2 = str2.toLowerCase();
+		
+		if(str1.length() == str2.length())
+		{
+			char[] charArray1 = str1.toCharArray();
+			char[] charArray2 = str2.toCharArray();
+			
+			Arrays.sort(charArray1); 
+			Arrays.sort(charArray2);
+			
+			boolean result = Arrays.equals(charArray1,charArray2);
+			System.out.println("Is Given Two Strings Are Anagram : Yes! " +result);
+		}
+		else
+			System.out.println("Is Given Two Strings Are Anagram : No! false");
+			
+		
+	}
+
+}
+OUTPUT>>
+--------
+Enter String-1
+Cat
+Enter String-2
+Act
+Is Given Two Strings Are Anagram : Yes! true
+
+
+
+
+Example7:-
+----------
+//NORMAL METHOD OF REVERSING A GIVEN STRING (or) //PALINDROME OF STRING
+import java.util.Scanner;
+public class Sample
+{
+  public static void main(String argu[]) 
+  {
+  Scanner scan = new Scanner(System.in);
+  System.out.println("Enter String : ");
+  String orgStr = scan.next();
+  String revStr = "";
+  for(int i=0;i<orgStr.length();i++)
+  {
+	  revStr = orgStr.charAt(i)+revStr;
+  }
+  System.out.println("The Reversed String is : " +revStr);
+  }
+}
+OUTPUT>>
+--------
+Enter String : 
+CAKE
+The Reversed String is : EKAC
+
+
+
+
+Example8:-
+----------
+//USING STRING BUILDER METHOD FOR REVERSING A GIVEN STRING (or) //PALINDROME OF STRING
+import java.util.Scanner;
+public class Bulider 
+{
+	public static void main(String argu[]) 
+	  {
+	  Scanner scan = new Scanner(System.in);
+	  System.out.println("Enter String : ");
+	  String orgStr = scan.next();
+	  StringBuilder build = new StringBuilder();               //Creating String Builder
+	  build.append(orgStr);                                    //Using Append to get the input
+	  build.reverse();                                         //Using Reverse Operation method from String Builder
+	  System.out.println("The Reversed String Is : " +build);
+	  }
+}
+OUTPUT>>
+--------
+Enter String : 
+CAKE
+The Reversed String is : EKAC
+
+
+
+
+Example9.0:-
+----------
+//PALINDROME NUMBER / NOT  (OR) REVERSING A NUMBER
+import java.util.Scanner;
+public class Sample1 
+{
+	public static void main(String[] args)
+	{
+	Scanner scan = new Scanner(System.in);
+	System.out.println("Enter Number : ");
+	int num = scan.nextInt();
+	
+	int sum=0;
+	int remainder;
+	int temp = num;
+	
+	while(num>0)
+	{
+		remainder = num%10;           
+		sum = (sum*10) + remainder;  
+		num = num/10;              
+	}
+	
+	if(temp==sum)
+		System.out.println("Yes! Given Number Is a Palindrome Number");
+	else 
+		System.out.println("No! Given Number Is NOT a Palindrome Number");
+	}
+	
+}
+OUTPUT>>
+--------
+Enter Number : 
+2002
+Yes! Given Number Is a Palindrome Number
+
+                                                        ((OR))
+														
+														
+														
+Example9.1:-
+----------
+//PALINDROME NUMBER / NOT  (OR) REVERSING A NUMBER
+import java.util.Scanner;
+public class ReverseNumber 
+{
+	   public static void main(String[] args)
+		{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter Number : ");
+		int number = scan.nextInt();
+		
+		int reverse=0;
+		int remainder;
+		int temp = number;
+		
+		while(number>0)
+		{
+			remainder = number%10;           
+			reverse = (reverse*10) + remainder;  
+			number = number/10;              
+		}
+		
+		System.out.println("The Reverse of a Number Is : " +reverse);
+		}
+}
+OUTPUT>>
+--------
+Enter Number : 
+1989
+The Reverse of a Number Is : 9891
+
+
+
+
+
+Example10:-
+----------
+//TO PRINT THE DEFAULT VALUES OF ALL PRIMITIVE DATA-TYPES
+public class DefaultValues 
+{
+	byte num1;
+	short num2;
+	int num3;
+	long num4;
+	float num5;
+	double num6;
+	boolean val7;
+	char val8;
+	
+	void display()
+	{
+	System.out.println("Default Value of byte      : " +num1);
+	System.out.println("Default Value of short     : " +num2);
+	System.out.println("Default Value of int       : " +num3);
+	System.out.println("Default Value of long      : " +num4);
+	System.out.println("Default Value of float     : " +num5);
+	System.out.println("Default Value of double    : " +num6);
+	System.out.println("Default Value of boolean   : " +val7);
+	System.out.println("Default Value of character : " +val8);
+	}
+	
+    public static void main(String[] args) 
+	{
+    	DefaultValues obj = new DefaultValues();
+    	obj.display();
+    	
+	}
+}
+OUTPUT>>
+--------
+Default Value of byte      : 0
+Default Value of short     : 0
+Default Value of int       : 0
+Default Value of long      : 0
+Default Value of float     : 0.0
+Default Value of double    : 0.0
+Default Value of boolean   : false
+Default Value of character : 
+
+                                                       ((OR))
+													   
+public class DefaultValues 
+{
+	static byte num1;
+	static short num2;
+	static int num3;
+	static long num4;
+	static float num5;
+	static double num6;
+	static boolean val7;
+	static char val8;
+	
+	public static void main(String[] args) 
+	{
+	System.out.println("Default Value of byte      : " +num1);
+	System.out.println("Default Value of short     : " +num2);
+	System.out.println("Default Value of int       : " +num3);
+	System.out.println("Default Value of long      : " +num4);
+	System.out.println("Default Value of float     : " +num5);
+	System.out.println("Default Value of double    : " +num6);
+	System.out.println("Default Value of boolean   : " +val7);
+	System.out.println("Default Value of character : " +val8);
+    }
+}
+OUTPUT>>
+--------
+Default Value of byte      : 0
+Default Value of short     : 0
+Default Value of int       : 0
+Default Value of long      : 0
+Default Value of float     : 0.0
+Default Value of double    : 0.0
+Default Value of boolean   : false
+Default Value of character : 
